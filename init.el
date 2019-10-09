@@ -40,7 +40,7 @@
 
 
 ;; always show line numbers
-(global-linum-mode 1)
+;(global-linum-mode 1)
 ;; insert a space if running in text mode
 (if window-system
     (progn)  
