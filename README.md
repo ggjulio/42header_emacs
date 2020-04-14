@@ -1,9 +1,11 @@
 ###  Install the header using the script :
 
 ```bash
-git clone https://github.com/ggjulio/42_emacs.git
-cd 42
+git clone https://github.com/ggjulio/42header_emacs.git
+cd 42header_emacs
 ./set_header.sh marvin marvin@42.fr
+cd ..
+rm -rf 42header_emacs
 ```
 
 ### Manual install :
