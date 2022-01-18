@@ -246,21 +246,21 @@
   )
 
 
-(defun header-update ()
-  "Updates the header for the current source file."
-  (interactive)
-  (save-excursion
-    (if (buffer-modified-p)
-        (progn
-          (goto-char (point-min))
-          (if (search-forward "Updated" nil t)
+      (defun header-update ()
+        "Updates the header for the current source file."
+        (interactive)
+        (save-excursion
+          (if (buffer-modified-p)
               (progn
-                (delete-region
-                 (progn (beginning-of-line) (point))
-                 (progn (end-of-line) (point)))
-				(header-insert-line-09)
-                (message "Header up to date."))))))
-  nil)
+                (goto-char (point-min))
+                (if (search-forward "Updated:" 891 t 1)
+                    (progn
+                      (delete-region
+                       (progn (beginning-of-line) (point))
+                       (progn (end-of-line) (point)))
+                                      (header-insert-line-09)
+                      (message "Header up to date."))))))
+        nil)
 
 
 
